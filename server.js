@@ -28,14 +28,8 @@ const app = express();
 
 const allowedOrigins = ['http://localhost:3000', 'https://proj-frontend-rosy.vercel.app/'];
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
+  origin: 'https://proj-frontend-rosy.vercel.app',  // Allow your frontend origin
+  credentials: true // Allow cookies and other credentials
 }));
 app.use(express.json());
 app.use(cookieParser());
