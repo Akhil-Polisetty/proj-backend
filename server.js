@@ -42,6 +42,12 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+
+app.get('/')
+{
+  res.json({ message: "Welcome to our API" });
+}
+
 app.post("/register", async (req, res) => {
   try {
     console.log("entered registration")
