@@ -1,0 +1,22 @@
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "Rohit Sharma",
+    "email": "ro@gmail.com",
+    "phone":"9898981212",
+    "city":"mumbai",
+    "password":"rohit"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+    "email": "ro@gmail.com",
+    "password":"rohit"
+}
+
+
