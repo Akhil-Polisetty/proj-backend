@@ -43,10 +43,11 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 
-app.get('/')
-{
-  res.json({ message: "Welcome to our API" });
-}
+  app.get("/", (req, res) => {
+
+   return res.status(200).json({ message: "Welcome to backend!" })
+  
+  });
 
 app.post("/register", async (req, res) => {
   try {
