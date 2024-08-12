@@ -116,16 +116,17 @@ app.get("/getUsering", (req, res) => {
     const email_cookie =req.cookies.uid;
     email_glob=email_cookie
     console.log("the stored cookie is ",email_cookie);
-    UserModel.findOne({ email: email_glob })
-      .then((user) => {
-        if (user) {
-            console.log("the data is ",user);
-          res.status(200).json(user);
-        } else {
-          res.status(404).json("User not found");
-        }
-      })
-      .catch((err) => res.status(500).json({ error: err.message }));
+    res.status(200).json(email_cookie);
+    // UserModel.findOne({ email: email_glob })
+    //   .then((user) => {
+    //     if (user) {
+    //         console.log("the data is ",user);
+    //       res.status(200).json(user);
+    //     } else {
+    //       res.status(404).json("User not found");
+    //     }
+    //   })
+    //   .catch((err) => res.status(500).json({ error: err.message }));
   });
   
 
